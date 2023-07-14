@@ -9,7 +9,7 @@ function App() {
     <div className="bg-main text-white h-screen">
       <Header />
       <Navbar />
-      <div className="pl-[10%]">
+      <div className="sm:pl-24">
         {/* <SmallVid /> */}
         <MainVid />
       </div>
