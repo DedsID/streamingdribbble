@@ -29,13 +29,14 @@ const Home = () => {
       </div>
       {/* end 1 */}
       {/* section 2 */}
-      <div>
+      <div className="pt-10">
         <div className="flex flex-col gap-5">
           <div className="flex justify-between items-center">
             <span className="text-white font-semibold">You may like</span>
             <span className="text-sm underline">View all</span>
           </div>
         </div>
+        
         <SmallVid
           judul="Let's fight 1 on 1"
           username="Helen5109 Fast"
