@@ -16,7 +16,7 @@ const Header = () => {
       >
         <div className="flex flex-row gap-5 items-center justify-center">
           <FontAwesomeIcon icon={faUserAstronaut} className="text-purpc h-10" />
-          <h1 className="text-lg">XPLAY</h1>
+          <h1 className="text-lg font-righteous font-thin">XPLAY</h1>
         </div>
 
         <div className="hidden sm:flex">

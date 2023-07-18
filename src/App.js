@@ -6,7 +6,7 @@ import Home from "./components/Home";
 
 function App() {
   return (
-    <div className="bg-main text-white h-screen py-5">
+    <div className="bg-main text-white h-full py-5 mb-14">
       <Header />
       <Navbar />
       <div className="sm:pl-24">

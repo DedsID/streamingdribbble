@@ -14,6 +14,9 @@ module.exports = {
         purpc: "#e473ff",
         text: "#58585a",
       },
+      fontFamily: {
+        righteous: ["Righteous", "cursive"],
+      },
     },
   },
   plugins: [],
