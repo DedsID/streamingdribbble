@@ -1,4 +1,5 @@
 import "./App.css";
+import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
 import MainVid from "./components/MainVid";
@@ -10,8 +11,10 @@ function App() {
       <Header />
       <Navbar />
       <div className="sm:pl-24 pt-5">
-        {/* <MainVid /> */}
-        <Home />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/LiveStream" element={<MainVid />} />
+        </Routes>
       </div>
     </div>
   );
