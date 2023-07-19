@@ -9,7 +9,7 @@ function App() {
     <div className="bg-main text-white h-full py-5 mb-14">
       <Header />
       <Navbar />
-      <div className="sm:pl-24">
+      <div className="sm:pl-24 pt-5">
         {/* <MainVid /> */}
         <Home />
       </div>

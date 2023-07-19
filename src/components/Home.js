@@ -36,11 +36,12 @@ const Home = () => {
             <span className="text-sm underline">View all</span>
           </div>
         </div>
-        
+
         <SmallVid
           judul="Let's fight 1 on 1"
           username="Helen5109 Fast"
           hideViews={shouldHideViews}
+          className="w-10"
         />
       </div>
       {/* end 2 */}
