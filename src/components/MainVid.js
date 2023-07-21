@@ -9,8 +9,8 @@ import { faPaperPlane } from "@fortawesome/free-regular-svg-icons";
 
 const MainVid = () => {
   return (
-    <div className="text-text flex flex-col sm:flex-row gap-10 px-5">
-      <div className="">
+    <div className="text-text flex flex-col sm:flex-row gap-10 px-5 justify-between">
+      <div className="basis-2/3">
         <div className="sm:rounded-xl overflow-hidden -mx-5">
           <Video />
         </div>
