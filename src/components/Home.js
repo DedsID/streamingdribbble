@@ -19,7 +19,7 @@ const Home = () => {
           </span>
         </div>
         <div className="flex flex-col gap-5">
-          <div className="rounded-xl overflow-hidden rounded-xl">
+          <div className="overflow-hidden rounded-xl">
             <Video />
           </div>
           <span className="">
@@ -30,7 +30,7 @@ const Home = () => {
       {/* end 1 */}
       {/* section 2 */}
       <div className="pt-10">
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-5 pb-5">
           <div className="flex justify-between items-center">
             <span className="text-white font-semibold">You may like</span>
             <span className="text-sm underline">View all</span>
@@ -41,7 +41,7 @@ const Home = () => {
           judul="Let's fight 1 on 1"
           username="Helen5109 Fast"
           hideViews={shouldHideViews}
-          className="w-10"
+          width="w-60"
         />
       </div>
       {/* end 2 */}

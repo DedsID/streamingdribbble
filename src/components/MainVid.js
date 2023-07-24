@@ -84,21 +84,25 @@ const MainVid = () => {
           judul="Let's fight 1 on 1"
           username="Helen5109 Fast"
           views="26,389M"
+          useLgFlexRow={true}
         />
         <SmallVid
           judul="Let's fight 1 on 1"
           username="Helen5109 Fast"
           views="26,389M"
+          useLgFlexRow={true}
         />
         <SmallVid
           judul="Let's fight 1 on 1"
           username="Helen5109 Fast"
           views="26,389M"
+          useLgFlexRow={true}
         />
         <SmallVid
           judul="Let's fight 1 on 1"
           username="Helen5109 Fast"
           views="26,389M"
+          useLgFlexRow={true}
         />
       </div>
       {/* Small Vid */}
