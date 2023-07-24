@@ -13,6 +13,7 @@ module.exports = {
         pinkc: "#f20e89",
         purpc: "#e473ff",
         text: "#58585a",
+        lightDark: "#1F2324",
       },
       fontFamily: {
         righteous: ["Righteous", "cursive"],

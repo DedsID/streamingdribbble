@@ -1,6 +1,8 @@
 import React from "react";
 import Video from "./Video";
 import SmallVid from "./SmallVid";
+import MainButton from "./button/Main";
+import YouMayLike from "./YouMayLike";
 
 const Home = () => {
   const shouldHideViews = true;
@@ -33,16 +35,12 @@ const Home = () => {
         <div className="flex flex-col gap-5 pb-5">
           <div className="flex justify-between items-center">
             <span className="text-white font-semibold">You may like</span>
-            <span className="text-sm underline">View all</span>
+            <MainButton warna="bg-lightDark" text="View All" />
           </div>
         </div>
-
-        <SmallVid
-          judul="Let's fight 1 on 1"
-          username="Helen5109 Fast"
-          hideViews={shouldHideViews}
-          width="w-60"
-        />
+        <div className="container mx-auto mt-8">
+          <YouMayLike />
+        </div>
       </div>
       {/* end 2 */}
     </div>

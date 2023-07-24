@@ -1,15 +1,10 @@
 import React from "react";
 
-const MainButton = ({ color, text }) => {
-  const buttonStyle = {
-    backgroundColor: color,
-    padding: "10px 20px",
-    borderRadius: "5px",
-    color: "#fff",
-    cursor: "pointer",
-  };
+const MainButton = (props) => {
+  const { warna, text } = props;
+
   return (
-    <button style={buttonStyle}>
+    <button className={`text-sm py-2 px-5 rounded-xl ${warna}`}>
         {text}
     </button>
   );
