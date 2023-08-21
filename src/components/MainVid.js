@@ -1,5 +1,7 @@
 import React from "react";
-import Video from "./Video";
+import { DefaultPlayer as Video } from "react-html5video";
+import "react-html5video/dist/styles.css";
+import IntroVideo from "../video/video1.mp4";
 import SmallVid from "./SmallVid";
 import Like from "./button/Like";
 import Subs from "./button/Subs";
@@ -18,9 +20,9 @@ const MainVid = () => {
   return (
     <div className="text-text flex flex-col sm:flex-row gap-10 max-sm:px-5 sm:pr-10 justify-between">
       <div className="basis-2/3">
-        <div className="sm:rounded-xl overflow-hidden -mx-5">
-          <Video />
-        </div>
+        <Video className="sm:rounded-xl overflow-hidden -mx-5">
+          <source src={IntroVideo} type="video/webm" />
+        </Video>
 
         {/* judul */}
         <div className="flex flex-row justify-between py-5 gap-10">
@@ -81,7 +83,7 @@ const MainVid = () => {
       </div>
 
       {/* Small Vid */}
-      <div className="flex flex-col gap-5">
+      <div className="flex flex-col gap-5 basis-1/3">
         <div className="flex justify-between items-center">
           <span className="text-white font-semibold">You may like</span>
           <span className="text-sm underline">View all</span>

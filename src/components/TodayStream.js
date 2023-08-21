@@ -13,14 +13,14 @@ const TodayStream = () => {
         judul="Let's fight 1 on 1"
         username="Helen5109 Fast"
         hideViews={true}
-        width="min-w-[25rem]"
+        width="min-w-[25rem] max-w-[25rem]"
         ava={ava2}
       />
       <SmallVid
         judul="Let's fight 1 on 1"
         username="Helen5109 Fast"
         hideViews={true}
-        width="min-w-[25rem]"
+        width="min-w-[25rem] max-w-[25rem]"
         live={true}
         ava={ava2}
       />
@@ -28,7 +28,7 @@ const TodayStream = () => {
         judul="Let's fight 1 on 1"
         username="Helen5109 Fast"
         hideViews={true}
-        width="min-w-[25rem]"
+        width="min-w-[25rem] max-w-[25rem]"
         live={true}
         ava={ava1}
       />
@@ -36,21 +36,21 @@ const TodayStream = () => {
         judul="Let's fight 1 on 1"
         username="Helen5109 Fast"
         hideViews={true}
-        width="min-w-[25rem]"
+        width="min-w-[25rem] max-w-[25rem]"
         ava={ava3}
       />
       <SmallVid
         judul="Let's fight 1 on 1"
         username="Helen5109 Fast"
         hideViews={true}
-        width="min-w-[25rem]"
+        width="min-w-[25rem] max-w-[25rem]"
         ava={ava1}
       />
       <SmallVid
         judul="Let's fight 1 on 1"
         username="Helen5109 Fast"
         hideViews={true}
-        width="min-w-[25rem]"
+        width="min-w-[25rem] max-w-[25rem]"
         ava={ava3}
       />
     </>

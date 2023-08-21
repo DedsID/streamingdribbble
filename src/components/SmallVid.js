@@ -1,5 +1,7 @@
 import React from "react";
-import Video from "./Video";
+import { DefaultPlayer as Video } from "react-html5video";
+import "react-html5video/dist/styles.css";
+import IntroVideo from "../video/video1.mp4";
 import MainButton from "./button/Main";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-regular-svg-icons";
@@ -14,8 +16,10 @@ const SmallVid = (props) => {
         useLgFlexRow ? "lg:flex-row" : "flex-col"
       } flex-col gap-3 text-text ${width} `}
     >
-      <div className="rounded-xl relative">
-        <Video />
+      <div className="rounded-xl relative basis-2/4">
+        <Video controls={[]}>
+          <source src={IntroVideo} type="video/webm" />
+        </Video>
         {live && (
           <div className="absolute top-2 left-2 text-white">
             <MainButton warna="bg-pink-500" text="LIVE" />

@@ -6,6 +6,7 @@ import ScrollableContainer from "./button/Scrollable";
 import CountdownTimer from "./Timer";
 import ThumbsVid from "./ThumbsVid";
 import GambarBanner from "../img/Banner.jpg";
+import { DefaultPlayer as Video } from "react-html5video";
 import { TbPlayerSkipForward } from "react-icons/tb";
 import { HiPause } from "react-icons/hi2";
 import { BiVolumeFull } from "react-icons/bi";
@@ -13,17 +14,10 @@ import { IoEllipsisVerticalOutline } from "react-icons/io5";
 import { AiOutlineExpandAlt } from "react-icons/ai";
 
 const Home = () => {
-  const [showAllStreams, setShowAllStreams] = useState(false); // Tombol show all section streams
-  const [showAllAuth, setShowAllAuth] = useState(false); // Tombol show all section Top Authors
-
-  const toggleShowAllStreams = () => {
-    setShowAllStreams((prevShowAll) => !prevShowAll);
-  };
-
   return (
     <div className="max-sm:px-5 sm:pl-5">
       {/* section 1 */}
-      <div className="flex flex-row gap-10 sm:pr-10">
+      <div className="flex flex-col xl:flex-row gap-10 sm:pr-10">
         <div className="flex flex-col gap-7 basis-1/2">
           <span className="text-7xl uppercase font-righteous">
             Play, compete, follow popular streamers
@@ -79,30 +73,12 @@ const Home = () => {
       />
       {/* end 3 */}
       {/* section 2 */}
-      <div className="pt-10 relative group">
-        <div className="flex flex-col gap-5 pb-5 sm:pr-10">
-          <div className="flex justify-between items-center">
-            <span className="text-white font-semibold text-xl">
-              Top Authors
-            </span>
-            <button onClick={() => setShowAllAuth(true)}>
-              <MainButton warna="bg-lightDark" text="View All" />
-            </button>
-          </div>
-        </div>
-        <div className="container mx-auto">
-          {showAllAuth ? (
-            <div id="scroll-vid" className="flex flex-wrap gap-3">
-              <TopAuth />
-            </div>
-          ) : (
-            <ScrollableContainer>
-              <TopAuth />
-            </ScrollableContainer>
-          )}
-          {/* gunakan tanda kurung untuk div yang berbeda */}
-        </div>
-      </div>
+      <ThumbsVid
+        text="Top Authors"
+        SourceThumbs={<TopAuth />}
+        useMap={true}
+        kodeSource={<TopAuth showAll={true} />}
+      />
       {/* end 2 */}
     </div>
   );
