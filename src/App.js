@@ -7,14 +7,24 @@ import Home from "./components/Home";
 
 function App() {
   return (
-    <div className="bg-main text-white h-full py-5 mb-14">
-      <Header />
-      <Navbar />
-      <div className="sm:pl-24 pt-5">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/LiveStream" element={<MainVid />} />
-        </Routes>
+    <div className="bg-main text-white h-full">
+      <div className="fixed w-full z-10">
+        <Header />
+      </div>
+      <div className="sm:pt-20 pt-[100px]">
+        <Navbar />
+        <div className="pt-5">
+          <div className="sm:pl-32">
+            <Routes>
+              <Route path="/" element={<Home />} />
+            </Routes>
+          </div>
+          <div className="sm:pl-32">
+            <Routes>
+              <Route path="/LiveStream" element={<MainVid />} />
+            </Routes>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -1,13 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
+import MainButton from "./button/Main";
+import ScrollableContainer from "./button/Scrollable";
 
-const ThumbsVid = (props) => {
+const ThumbsVid = ({ text, SourceThumbs, useMap, kodeSource }) => {
+  const [showAll, setShowAll] = useState(false); // Tombol show all
+
+  const toggleShowAllStreams = () => {
+    setShowAll((prevShowAll) => !prevShowAll);
+  };
+
   return (
-    <div>
-      <div className="flex flex-row justify-center items-center">
-        <span>{props.header}</span>
-        <span className="bg-gray-700 px-5 py-3">View all</span>
+    <div className="pt-10 relative group">
+      <div className="flex flex-col gap-5 pb-5 sm:pr-10">
+        <div className="flex justify-between items-center">
+          <span className="text-white font-semibold text-xl">{text}</span>
+          <button onClick={toggleShowAllStreams}>
+            <MainButton
+              warna="bg-lightDark"
+              text={showAll ? "View Less" : "View All"}
+            />
+          </button>
+        </div>
       </div>
-      <div></div>
+      <div className="container mx-auto">
+        {/* lebar dari Scroll Container */}
+        {showAll ? (
+          <div id="scroll-vid" className="flex flex-wrap gap-3">
+            {useMap ? kodeSource : SourceThumbs}
+          </div>
+        ) : (
+          <ScrollableContainer>{SourceThumbs}</ScrollableContainer>
+        )}
+      </div>
     </div>
   );
 };

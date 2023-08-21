@@ -2,14 +2,21 @@ import React from "react";
 import Video from "./Video";
 import SmallVid from "./SmallVid";
 import Like from "./button/Like";
+import Subs from "./button/Subs";
 import Comments from "./Comments";
-import MainButton from "./button/Main";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-regular-svg-icons";
 
+// Ava
+import ava1 from "../img/Ava/ava1.png";
+import ava2 from "../img/Ava/ava2.png";
+import ava3 from "../img/Ava/ava3.png";
+import ava4 from "../img/Ava/ava4.png";
+import ava5 from "../img/Ava/ava5.png";
+
 const MainVid = () => {
   return (
-    <div className="text-text flex flex-col sm:flex-row gap-10 px-5 justify-between">
+    <div className="text-text flex flex-col sm:flex-row gap-10 max-sm:px-5 sm:pr-10 justify-between">
       <div className="basis-2/3">
         <div className="sm:rounded-xl overflow-hidden -mx-5">
           <Video />
@@ -28,12 +35,12 @@ const MainVid = () => {
 
         {/* user */}
         <div className="flex flex-row gap-5">
-          <div className="bg-blue w-10 h-10 rounded-lg"></div>
+          <img src={ava4} alt="mike" className="w-10 h-10 rounded-lg" />
           <div className="flex flex-col">
             <div className="text-white text-lg flex flex-row">
               Mike Fisher
-              <span className="text-xs border border-1 ml-5 px-7 py-1 rounded-md hidden sm:block">
-                Subcribe
+              <span className="ml-5 hidden sm:block">
+                <Subs />
               </span>
             </div>
             <div className="text-sm">5 158 223 subcribers</div>
@@ -42,9 +49,7 @@ const MainVid = () => {
         {/* end user */}
         {/* subs and like for mobile */}
         <div className="flex sm:hidden flex-row justify-around pt-5 gap-5">
-          <div className="flex items-center justify-center text-xs text-white border border-1 px-7 py-1 rounded-md w-full">
-            Subcribe
-          </div>
+          <Subs />
           <Like />
         </div>
         {/* end mobile */}
@@ -58,11 +63,11 @@ const MainVid = () => {
               <span className="flex sm:hidden">View All</span>
             </span>
           </div>
-          <div className="flex flex-row justify-between items-center border-b-2 mt-5 hidden sm:flex">
+          <div className="flex-row justify-between items-center border-b-2 mt-5 hidden sm:flex">
             <input
               type="text"
               placeholder="Insert your komplen here"
-              className="w-full bg-main p-2 text-white"
+              className="w-full bg-main p-2 text-white mr-10 focus:outline-none"
             />
             <FontAwesomeIcon icon={faPaperPlane} />
           </div>
@@ -70,6 +75,7 @@ const MainVid = () => {
         <Comments
           username="mooddd"
           isikomplen="You're akdjad adj adkljawdkl akdwj kajdkljdkljadkaj ladlkaj"
+          ava={ava5}
         />
         {/* End Comment */}
       </div>
@@ -85,24 +91,31 @@ const MainVid = () => {
           username="Helen5109 Fast"
           views="26,389M"
           useLgFlexRow={true}
+          live={true}
+          ava={ava1}
         />
         <SmallVid
           judul="Let's fight 1 on 1"
           username="Helen5109 Fast"
           views="26,389M"
           useLgFlexRow={true}
+          live={true}
+          ava={ava2}
         />
         <SmallVid
           judul="Let's fight 1 on 1"
           username="Helen5109 Fast"
           views="26,389M"
           useLgFlexRow={true}
+          live={true}
+          ava={ava3}
         />
         <SmallVid
           judul="Let's fight 1 on 1"
           username="Helen5109 Fast"
           views="26,389M"
           useLgFlexRow={true}
+          ava={ava2}
         />
       </div>
       {/* Small Vid */}

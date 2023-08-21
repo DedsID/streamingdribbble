@@ -33,3 +33,48 @@ code {
     border-left: solid 5px #e473ff;
   }
 }
+
+/* underlined animation from ltr */
+
+.link-h {
+  @apply relative hover:text-purpc duration-500;
+}
+
+.link-h::after {
+  @apply content-[''] bg-purpc h-[3px] w-[0%] left-0 -bottom-[5px] rounded-xl absolute duration-300;
+}
+
+.link-h:hover::after {
+  @apply w-[100%];
+}
+
+/* end anim */
+
+#scroll-vid::-webkit-scrollbar {
+  display: none;
+}
+
+.custom-tooltip {
+  position: relative;
+  cursor: pointer;
+}
+
+.custom-tooltip::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.25rem 0.5rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.custom-tooltip:hover::before {
+  opacity: 1;
+}
